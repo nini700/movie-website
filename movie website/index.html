@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinéaste - Movie Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h1>MovieSearch</h1>
+            </div>
+            <div class="nav-links">
+                <button id="showSearchBtn" class="nav-btn active">
+                    <i class="fas fa-search"></i>
+                    <span>Discover</span>
+                </button>
+                <button id="showFavoritesBtn" class="nav-btn">
+                    <i class="fas fa-heart"></i>
+                    <span>Favorites</span>
+                </button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div id="searchSection" class="search-section">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="searchInput" placeholder="Search for a film...">
+                    </div>
+                </div>
+                <div id="loading" class="loading">
+                    <div class="loader"></div>
+                </div>
+                <div id="error" class="error"></div>
+                <div id="moviesGrid" class="movies-grid"></div>
+            </div>
+
+            <div id="favoritesSection" class="favorites-section hide">
+                <h2>Your Collection</h2>
+                <div id="favoritesGrid" class="movies-grid"></div>
+            </div>
+        </main>
+        
+        <div id="movieModal" class="modal">
+            <div class="modal-content">
+                <button class="close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div id="movieDetails" class="movie-details"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
